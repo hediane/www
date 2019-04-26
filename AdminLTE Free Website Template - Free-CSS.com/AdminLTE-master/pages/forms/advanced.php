@@ -2,6 +2,8 @@
 <html>
   <head>
     <meta charset="UTF-8">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>AdminLTE 2 | gerer les livraisons</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
@@ -25,7 +27,7 @@
     <link href="../../dist/css/skins/_all-skins.min.css" rel="stylesheet" type="text/css" />
     <!-- Theme style -->
     <link href="../../plugins/iCheck/all.css" rel="stylesheet" type="text/css" />
-        <link href="../../dist/css/livraison.css" rel="stylesheet" type="text/css" />
+        <link href="livraison.css" rel="stylesheet" type="text/css" />
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -448,7 +450,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-           livraison 
+           Formulaire livraison 
             <small>Preview</small>
           </h1>
           <ol class="breadcrumb">
@@ -459,40 +461,40 @@
         </section>
 
         <form action="../../crud/views/ajouterLivraison.php" method="post" id="form" style="">
-     <div id="champs1" class="champs1"></div>
-     <div id="champs2" class="champs2"></div>
-    <div id="champs3" class="champs3"></div>
-    <div id="champs4" class="champs4"></div>
-     <div id="champs5" class="champs5"></div>
-   <h1>Formulaire</h1>
-    <div >
-        <label for="Commande">Commande :</label>
-        <input type="text" id ="Commande" name="Commande" maxlength="9" placeholder="Code Commande" onblur="Controle(this.id)"> 
-    </div>
-    <div>
-        <label for="Livreur">Livreur :</label>
-        <input type="text" id="Livreur" name="Livreur" maxlength="9" placeholder="Code Livreur" onblur="Controle(this.id)">
-     </div>
-    <div>
-        <label for="Adresse">Adresse :</label>
-        <input type="text" id="Adresse" name="Adresse" maxlength="100" placeholder="Adresse compléte" onblur="Controle(this.id)">
+     <div id="champs1" class="champs1" style="top: 160px;position:absolute;left: 800px"></div>
+     <div id="champs2" class="champs2" style="top: 240px;position:absolute;left: 800px"></div>
+    <div id="champs3" class="champs3" style="top: 300px;position:absolute;left: 800px"></div>
+    <div id="champs5" class="champs5" style="top: 460px;position:absolute;left:800px"></div>
+     <div id="controle" class="controle" style="top: 550px;position:absolute;left: 680px"></div>
+    <ul class="form-style-1">
+      <li>
+        <label for="Commande">Commande:</label>
+        <input type="text" id ="Commande" name="Commande" maxlength="9" class="field-divided" placeholder="Code Commande" onblur="Controle(this.id)">
+    </li>
+    <li>
+        <label for="Livreur">Livreur:</label>
+        <input type="text" id="Livreur" name="Livreur" maxlength="9" class="field-divided" placeholder="Code Livreur" onblur="Controle(this.id)">
+     </li>
+    <li>
+        <label for="Adresse">Adresse:</label>
+        <input type="text" id="Adresse" name="Adresse" maxlength="100" class="field-divided" placeholder="Adresse compléte" onblur="Controle(this.id)">
 
-    </div>
-    <div>
+    </li>
+    <li>
         <label for="Numero">N°Téléphone:</label>
-         <input type="text" id="Numero" name="Numero" maxlength="50" placeholder="Ex: +216 55 555 555" onblur="Controle(this.id)" onfocus="javascript:if(this.value == '') { this.value = '+216 '; } " onfocusout="javascript:if(this.value == '+216 ') { this.value = ''; }"> 
-    </div>
-    <div>
-        <label for="Date">Date :</label>
-         <input type="Date" id="Date" name="Date" onblur="Controle(this.id)"> 
-    </div>
-         <div class="button">
-        <input type="button" name="button" id="button" value="Envoyer" onclick="verifier()">
-    </div>
+         <input type="text" id="Numero" name="Numero" maxlength="50" class="field-divided" placeholder="Ex: +216 55 555 555" onblur="Controle(this.id)" onfocus="javascript:if(this.value == '') { this.value = '+216 '; } " onfocusout="javascript:if(this.value == '+216 ') { this.value = ''; }"> 
+    </li>
+    <li>
+        <label for="Date">Date:</label>
+         <input type="Date" id="Date" name="Date" class="field-divided" onblur="Controle(this.id)"> 
+    </li>
+         <li class="button">
+        <input type="button" name="button" id="button" class="field-divided" value="Envoyer" onclick="verifier()">
+    </li>
         <div id="controle" class="controle"></div>
        
   </form>
-    <li style="list-style: none;left: 700px;position: absolute;top:70px ;font-size: 16px" ><a href="../../crud/views/afficherLivraison.php" style="color: black">afficher livraisons</a></li>
+    <li style="list-style: none;left: 300px;position: absolute;top:100px ;font-size: 14px" ><a href="../../crud/views/afficherLivraison.php" style="color: black">afficher livraisons</a></li>
                  
 
         </section><!-- /.content -->

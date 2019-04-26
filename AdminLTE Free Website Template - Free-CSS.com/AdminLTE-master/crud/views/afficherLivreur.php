@@ -19,6 +19,7 @@ if(isset($_POST['search']))
     <title>AdminLTE 2 | gerer les livraisons</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
+    <link rel="stylesheet" type="text/css" href="style_tab_livreur.css">
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -460,7 +461,7 @@ if(isset($_POST['search']))
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-           livreur
+           table des livreurs
             <small>Preview</small>
           </h1>
           <ol class="breadcrumb">
@@ -485,16 +486,17 @@ if(isset($_POST['search']))
     </div>
     <form action="../../crud/views/afficherLivreur.php" method="post" id="form">
             <input type="text" name="valueToSearch" placeholder="Value To Search" style="position: absolute;left: 1000px;top:150px"><br><br>
-            <input type="submit" name="search" value="Filter" style="position: absolute;left: 700px;top:150px"><br><br>
-<table border="1" style ="margin: 0 auto ; top: 200px ; position:absolute; left:390px;width: 
-50%; background-color: white;">
+            <input type="submit" name="search" value="Filter" style="position: absolute;left: 950px;top:150px"><br><br>
+           
+<table style ="margin: 0 auto ; top: 200px ; position:absolute; left:300px;width: 
+70%;" class="hediane">
 <tr>
-<td>id_livreur</td>
-<td>nom</td>
-<td>prenom</td>
-<td>tel_livreur</td>
-<td>supprimer</td>
-<td>modifier</td>
+<th>id_livreur</th>
+<th>nom</th>
+<th>prenom</th>
+<th>tel_livreur</th>
+<th>supprimer</th>
+<th>modifier</th>
 </tr>
 
 

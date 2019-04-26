@@ -18,6 +18,10 @@
     <!-- bootstrap wysihtml5 - text editor -->
     <link href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
     <link href="../../dist/css/livreur.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" type="text/css" href="style_.css">
+        <link rel="stylesheet" type="text/css" href="livreur.css">
+
+
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -441,7 +445,7 @@
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-            Livreur
+            Formulaire livreur
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -450,35 +454,33 @@
         </section>
 
         <!-- Main content -->
-        <form action="../../crud/views/ajouterLivreur.php" method="post" id="form" style="position: absolute;left: 500px;top:200px">
-  <h1 style="position: absolute;left: 120px;top:-50px">Formulaire</h1>
-  <div id="champ"></div>
-  <div id="champ1"></div>
-  <div id="controle1"></div>
-    <div>
-        <label for="nom">Nom :</label>
-        <input type="text" id ="nom" name="nom" maxlength="9" placeholder=" nom livreur" onblur="Controle(this.id)"> 
-    </div>
+        <form action="../../crud/views/ajouterLivreur.php" method="post" id="form" style="position: absolute;left: 600px;top:200px">
+          <div id="champ" class="champ" style="position: absolute;left: 280px"></div>
+  <div id="champ1" class="champ1" style="position: absolute;left: 280px"></div>
+  <div id="controle1" class="controle1"></div>
+  <ul class="form-style-2">
+    <li>
 
-    <div>
-        <label for="prenom">Prenom :</label>
-        <input type="text" id="prenom" name="prenom" maxlength="9" placeholder=" prenom livreur" onblur="Controle(this.id)">
-     </div>
+        <label for="nom" style="top: 20px;position: absolute;left:-30px">Nom :</label>
+        <input type="text" id ="nom" name="nom" maxlength="9" placeholder=" nom livreur" onblur="Controle(this.id)" style="top: 20px;position: absolute;"> 
+    </li>
 
-    <div>
-        <label for="Numero">N°Téléphone:</label>
-         <input type="text" id="Numero" name="Numero" maxlength="50" placeholder="Ex: +216 55 555 555" onblur="Controle(this.id)" onfocus="javascript:if(this.value == '') { this.value = '+216 '; } " onfocusout="javascript:if(this.value == '+216 ') { this.value = ''; }"> 
-    </div>
-<div>
-        <label for="note">Note :</label>
-        <input type="text" id="note" name="note" maxlength="9" placeholder=" Ecrire une chose ..." onblur="Controle(this.id)" style="height: 60px">
-     </div>
+    <li>
+        <label for="prenom"style="top: 60px;position: absolute;left:-30px">Prenom :</label>
+        <input type="text" id="prenom" name="prenom" maxlength="9" placeholder=" prenom livreur" onblur="Controle(this.id)" style="top: 60px;position: absolute;">
+     </li>
 
-    <div class="button">
-        <input type="button" name="button" id="button" value="Ajouter" onclick="verifier()" style="position: absolute;left:135px;top:250px">
-    </div>
+    <li>
+        <label for="Numero"style="top: 100px;position: absolute;left:-30px">N°Téléphone:</label>
+         <input type="text" id="Numero" name="Numero" maxlength="50" placeholder="Ex: +216 55 555 555" onblur="Controle(this.id)" onfocus="javascript:if(this.value == '') { this.value = '+216 '; } " onfocusout="javascript:if(this.value == '+216 ') { this.value = ''; }" style="top: 100px;position: absolute;"> 
+    </li>
+
+    <li class="button">
+        <input type="button" name="button" id="button" class="field-divided" value="Ajouter" onclick="verifier()" style="top: 90px ;position: relative;">
+    </li>
+    </ul>
          </form> 
-         <li style="list-style: none;left:700px;top:50px;position: absolute;"><a href="../../crud/views/afficherLivreur.php"style="color: black">afficher livreurs</a></li>
+         <li style="list-style: none;left:300px;top:100px;position: absolute;"><a href="../../crud/views/afficherLivreur.php"style="color: black">afficher livreurs</a></li>
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->

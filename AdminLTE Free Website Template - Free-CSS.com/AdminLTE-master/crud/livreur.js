@@ -36,7 +36,7 @@ function Controle(nom_controle)
       }
       else if (document.getElementById(nom_controle).value == "")
       {
-              document.getElementById("champ1").innerText = " OBLIGATOIRE !!";
+              document.getElementById("champ1").innerText = "OBLIGATOIRE";
               document.getElementById(nom_controle).style.border = '#CC3300 2px solid';
               b_pre= false;
        }

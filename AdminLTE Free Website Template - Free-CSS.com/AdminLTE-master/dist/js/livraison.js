@@ -133,7 +133,7 @@ function verifier()
   }
   else
   {
-    document.getElementById("controle").innerText = "verifier";
+    document.getElementById("controle").innerText = "verifier ls champs";
   }
 }
 

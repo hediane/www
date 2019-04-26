@@ -1,13 +1,13 @@
 <?php
 if(isset($_POST['search']))
 {
-    $valueToSearch = $_POST['id_commande'];
+    $valueToSearch = $_POST['id_livraison'];
     // search in all table columns
     // using concat mysql function
-    $sql = "SELECT * FROM `livraison` WHERE id_commande='".$valueToSearch."%'"; 
+    $sql = "SELECT * FROM `livraison` WHERE id_livraison='".$valueToSearch."%'"; 
 }
  else {
-    $sql = "SELECT * FROM `livraison` WHERE id_commande=''";   
+    $sql = "SELECT * FROM `livraison` WHERE id_livraison=''";   
 }
 ?>
 <!DOCTYPE html>
@@ -18,15 +18,16 @@ if(isset($_POST['search']))
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="style_table.css">
 
     <!-- Title -->
     <title>Design Cuisine - Livraison</title>
 
     <!-- Favicon -->
-    <link rel="icon" href="./img/core-img/favicon.ico">
+    <link rel="icon" href="../../img/core-img/favicon.ico">
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../style.css">
 
 </head>
 
@@ -66,7 +67,7 @@ if(isset($_POST['search']))
                     <nav class="classy-navbar justify-content-between" id="akameNav">
 
                         <!-- Logo -->
-                       <a class="nav-brand" href="index.html"><img class="logo" src="./img/core-img/_logo1.png" alt=""></a>
+                       <a class="nav-brand" href="index.html"><img class="logo" src="../../img/core-img/_logo1.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -82,14 +83,14 @@ if(isset($_POST['search']))
                             <!-- Nav Start -->
                              <div class="classynav">
                                 <ul id="nav">
-                                    <li> </span> <a href="./index.html"></a><input type="image" src="./img/core-img/home.png"class="home"/></li>
+                                    <li> </span> <a href="../../index.html"></a><input type="image" src="../../img/core-img/home.png"class="home"/></li>
                                     <!--<li class="active"><a href="./index.html">Home</a></li>-->
                                     <li><a href="#">Produits</a>
                                         <ul class="dropdown">
-                                            <li><a href="./index.html">- Cuisine</a></li>
-                                            <li><a href="./about.html">- Dressing</a></li>
-                                            <li><a href="./service.html">- Porte</a></li>
-                                            <li><a href="./portfolio.html">- Salle de bain</a></li>
+                                            <li><a href="../../index.html">- Cuisine</a></li>
+                                            <li><a href="../../about.html">- Dressing</a></li>
+                                            <li><a href="../../service.html">- Porte</a></li>
+                                            <li><a href="../../portfolio.html">- Salle de bain</a></li>
                                             <li><a href="#">- Dropdown</a>
                                                 <ul class="dropdown">
                                                     <li><a href="#">- Dropdown Item</a></li>
@@ -100,31 +101,31 @@ if(isset($_POST['search']))
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="./portfolio.html">Portefeuille</a></li>
+                                    <li><a href="../../portfolio.html">Portefeuille</a></li>
                                     <li><a href="#">Services</a>
                                     <ul class="dropdown">
-                                            <li><a href="./commande.html">- commande</a></li>
+                                            <li><a href="../../commande.html">- commande</a></li>
                                             <li><a href="#">- Livraison</a>
                                                 <ul class="dropdown">
                                                     <li><a href="../../../crud/partieClient/livraison_client.php">- livraison</a></li>
-                                                    <li><a href="reclamation.html">- réclamation</a></li>
+                                                    <li><a href="../../reclamation.html">- réclamation</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="./about.html">présentation</a></li>
-                                    <li><a href="./blog.html">Blog</a></li>
-                                    <li><a href="./contact.html">Contactez_nous</a></li>
+                                    <li><a href="../../about.html">présentation</a></li>
+                                    <li><a href="../../blog.html">Blog</a></li>
+                                    <li><a href="../../contact.html">Contactez_nous</a></li>
                                 </ul>
                                 <!--search icon -->
                                     <!--<div id="searchIcon"> 
                                     <i class="icon_search" aria-hidden="true"> </i>
                                      </div>  -->
                                 <ul>
-                                    <li><input type="image" src="./img/core-img/cartee.png"class="carte"/></li>
-                                    <li><input type="image" src="./img/core-img/user.png" class="user"/></li>
-                                    <li><input type="image" src="./img/core-img/search.png"class="search"/></li>
-                                    <li><input type="image" src="./img/core-img/3bras.png"class="bars"/></li>
+                                    <li><input type="image" src="../../img/core-img/cartee.png"class="carte"/></li>
+                                    <li><input type="image" src="../../img/core-img/user.png" class="user"/></li>
+                                    <li><input type="image" src="../../img/core-img/search.png"class="search"/></li>
+                                    <li><input type="image" src="../../img/core-img/3bras.png"class="bars"/></li>
                                 
                                 </ul>
                                 <!-- Cart Icon -->
@@ -151,29 +152,27 @@ if(isset($_POST['search']))
             <div class="row">
                 <div class="col-12">
                     <div class="breadcrumb-content">
-                        <h3 style=""> suivre vos livraison pas a pas</h3>
+                        <h3 style=""> suivre vos livraisons pas a pas</h3>
                <form method="post" id="form">
 	             <div >
-                      <label for="id_commande">id_commande :</label>
-                      <input type="text" id ="id_commande" name="id_commande" maxlength="9" placeholder="Code id_commande" onblur="Controle(this.id)"> 
-                      <input type="submit" name="search" value="Filter"><br><br>
+                      <label for="id_livraison" style="top:80px;position: absolute;left:450px">id_livraison :</label>
+                      <input type="text" id ="id_livraison" name="id_livraison" maxlength="9" placeholder=" code livraison" onblur="Controle(this.id)"style="top: 80px;position:absolute;"> 
+                      <input type="submit" name="search" value="Filter" style="top: 80px;position:absolute;left: 750px"><br><br>
 
                  </div> 
 	          </form>
-<table border="1" style ="margin: 0 auto ; top: 100px ; position: absolute; left: px;width: 
-	100%; background-color: white;">
+<table class="table">
 	<tr>
-	<td>id_livraison</td>
-	<td>id_commande</td>
-	<td>adresse</td>
-	<td>date</td>
-	<td>suivre</td>
+	<th class="ka">id_livraison</th>
+	<th>id_commande</th>
+	<th>adresse</th>
+	<th>date</th>
+	<th>suivre</th>
 	</tr>
     <?php
     include "../core/livraisonC.php";
     $livraison1C=new livraisonC();
     $listeLivraison=$livraison1C->afficherLivraisons($sql);
-
         
 foreach($listeLivraison as $row)
 {
@@ -183,7 +182,7 @@ foreach($listeLivraison as $row)
     <td><?PHP echo $row['id_commande']; ?></td>
     <td><?PHP echo $row['adresse']; ?></td>
     <td><?PHP echo $row['date']; ?></td>
-    </td>
+    <td><?php $today = date("Y-m-d"); if( $row['date'] > $today ) { echo "En Attente !"; } else { echo "cbon"; } ?></td>
     </tr>
 <?PHP
 }
@@ -206,7 +205,7 @@ foreach($listeLivraison as $row)
                 <div class="col-12 col-sm-6 col-md-4">
                     <div class="single-footer-widget mb-80">
                         <!-- Footer Logo -->
-                        <a href="#" class="footer-logo"><img src="img/core-img/_logo1.png" alt=""></a>
+                        <a href="#" class="footer-logo"><img src="../../img/core-img/_logo1.png" alt=""></a>
 
                       <!--  <p class="mb-30">Design cuisine confirme son positionnement de leader sur le marché tunisien dans la fabrication de meubles sur mesure en tout genre..</p>-->
 
@@ -261,15 +260,15 @@ foreach($listeLivraison as $row)
 
     <!-- All JS Files -->
     <!-- jQuery -->
-    <script src="js/jquery.min.js"></script>
+    <script src="../../js/jquery.min.js"></script>
     <!-- Popper -->
-    <script src="js/popper.min.js"></script>
+    <script src="../../js/popper.min.js"></script>
     <!-- Bootstrap -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
     <!-- All Plugins -->
-    <script src="js/akame.bundle.js"></script>
+    <script src="../../js/akame.bundle.js"></script>
     <!-- Active -->
-    <script src="js/default-assets/active.js"></script>
+    <script src="../../js/default-assets/active.js"></script>
 
 </body>
 

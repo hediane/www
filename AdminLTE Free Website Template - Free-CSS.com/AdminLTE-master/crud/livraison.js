@@ -2,7 +2,6 @@ var b_com = false; var b_liv = false; var b_adr = false; var b_tel = false; var 
 
 function Controle(nom_controle)
 {
-  alert("blabla");
   if(nom_controle == "Commande")
   {
     if(isNaN(document.getElementById(nom_controle).value)  )
@@ -64,24 +63,6 @@ function Controle(nom_controle)
   else if (nom_controle == "Numero")
   {
     b_tel = true;
-    /*var res = document.getElementById(nom_controle).value.split("+");
-    var res_ = res_[1].split(" ");
-    for(var i=0; i<res_.length; i++)
-    {
-      if(isNaN(res_[i]))
-      {
-        document.getElementById("hediane").innerText = aaaaaaaaaaaaaaaaaaaaaaaaaaa;
-        document.getElementById(nom_controle).style.border = '#CC3300 2px solid';
-        b_tel = false;
-        var blabla = true;
-        break;
-      }
-    }
-    if (!blabla)
-    {
-      document.getElementById(nom_controle).style.border = '2px solid #999';
-        b_tel = true;
-    }*/
   }
   else if (nom_controle == "Date")
   {
@@ -126,12 +107,13 @@ function verifier()
   {
     document.getElementById("controle").innerText ="valide";
      document.getElementById("form").submit();
-  }
-  else
+   }
+   else
   {
     document.getElementById("controle").innerText = "verifier";
   }
 }
+
 
 
 //<button type="submit" onclick="Hediaaane()">Envoyer</button>

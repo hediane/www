@@ -1,5 +1,5 @@
 ﻿<?php
-include "crud/config.php";
+include "../config.php";
 
 class LivraisonC
 {

@@ -21,6 +21,8 @@ if(isset($_POST['search']))
     <title>AdminLTE 2 | gerer les livraisons</title>
     <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
     <!-- Bootstrap 3.3.2 -->
+        <link rel="stylesheet" type="text/css" href="style_tab_livraison.css">
+
     <link href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <!-- Font Awesome Icons -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -462,7 +464,7 @@ if(isset($_POST['search']))
         <!-- Content Header (Page header) -->
         <section class="content-header">
           <h1>
-           livraison 
+           table des livraisons 
             <small>Preview</small>
           </h1>
           <ol class="breadcrumb">
@@ -479,29 +481,30 @@ if(isset($_POST['search']))
    <input type="submit" name="button" id="button" value="Ajouter livraison" onclick='location.href ="../../pages/forms/advanced.php"' style="background-color: white;">
     </div> -->
           <li style="font-size: 15px;list-style: none;font-style: normal;
-"><a href="../../pages/forms/advanced.php" style="left:600px;color: black;position:absolute;top:50px">ajouter livraison</a></li>
+"><a href="../../pages/forms/advanced.php" style="left:300px;color: black;position:absolute;top:100px">ajouter livraison</a></li>
 
     <!--<div class="button" style="position: absolute; left:380px; top:100px;"> 
    <input type="submit" name="button" id="button" value="Afficher livreur" onclick='location.href ="../../crud/views/afficherLivreur.php"' style="background-color: white;">-->
-           <li style="font-size: 15px;list-style: none;"><a href="../../crud/views/afficherLivreur.php" style="left:720px;color: black;position:absolute;top:50px">afficher livreur</a></li>
+           <li style="font-size: 15px;list-style: none;"><a href="../../crud/views/afficherLivreur.php" style="left:300px;color: black;position:absolute;top:120px">afficher livreur</a></li>
 
     </div>
-  <a href="../../pdf.php" style="position: absolute;top:180px;left: 300px"> conversion les livraisons a une page PDF ..</a>
+    <h1>afficher livraison</h1>
+  <a href="../../pdf.php" style="position: absolute;top:110px;left: 1000px"> impression les livraisons a une page PDF ..</a>
 
  	  <form action="../../crud/views/afficherLivraison.php" method="post" id="form">
             <input type="text" name="valueToSearch" placeholder="Value To Search" style="position: absolute;left: 1000px;top:150px"><br><br>
             <input type="submit" name="search" value="Filter" style="position: absolute;left: 950px;top:150px"><br><br>
-<table border="1" style ="margin: 0 auto ; top: 200px ; position:absolute; left:250px;width: 
-80%; background-color: white;">
+<table  style ="margin: 0 auto ; top: 200px ; position:absolute; left:400px;width: 
+60%" class="scarraa">
 <tr>
-<td>id_livraison</td>
-<td>id_commande</td>
-<td>id_livreur</td>
-<td>adresse</td>
-<td>num_tel</td>
-<td>date</td>
-<td>supprimer</td>
-<td>modifier</td>
+<th>id_livraison</th>
+<th>id_commande</th>
+<th>id_livreur</th>
+<th>adresse</th>
+<th>num_tel</th>
+<th>date</th>
+<th>supprimer</th>
+<th>modifier</th>
 </tr>
 
 
