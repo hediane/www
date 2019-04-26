@@ -1,0 +1,13 @@
+CREATE TABLE `livraison` (
+ `id_livraison` int(11) NOT NULL AUTO_INCREMENT,
+ `id_livreur` int(11) NOT NULL,
+ `id_commande` int(11) NOT NULL,
+ `adresse` varchar(50) NOT NULL,
+ `num_tel` varchar(20) DEFAULT NULL,
+ `date` date NOT NULL,
+ PRIMARY KEY (`id_livraison`),
+ KEY `id_livreur` (`id_livreur`),
+ KEY `id_commande` (`id_commande`),
+ CONSTRAINT `livraison_ibfk_1` FOREIGN KEY (`id_livreur`) REFERENCES `livreur` (`id_livreur`),
+ CONSTRAINT `livraison_ibfk_2` FOREIGN KEY (`id_commande`) REFERENCES `commande` (`id_commande`)
+) ENGINE=InnoDB AUTO_INCREMENT=95 DEFAULT CHARSET=latin1
